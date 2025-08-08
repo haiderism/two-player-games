@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RotateCcw, Trophy, Puzzle, Clock, Plus, X } from 'lucide-react'
+import { RotateCcw, Trophy, Puzzle, Clock } from 'lucide-react'
 
 interface GameState {
   letters: string[]

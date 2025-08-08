@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RotateCcw, Trophy, Target, Shield, Sword, Crown } from 'lucide-react'
+import { RotateCcw, Target, Shield, Sword, Crown } from 'lucide-react'
 
 type ActionType = 'attack' | 'defend' | 'charge' | 'special'
 

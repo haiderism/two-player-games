@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RotateCcw, Trophy, Zap, Clock, Target, Brain, Calculator } from 'lucide-react'
+import { RotateCcw, Trophy, Zap, Clock } from 'lucide-react'
 
 type MiniGame = 'pattern' | 'math' | 'reaction' | 'memory' | 'sequence'
 
