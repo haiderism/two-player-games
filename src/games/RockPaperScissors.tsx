@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RotateCcw, Trophy, Scissors } from 'lucide-react'
+import { RotateCcw, Trophy } from 'lucide-react'
 
 type Choice = 'rock' | 'paper' | 'scissors' | null
 type RoundResult = 'player1' | 'player2' | 'tie'

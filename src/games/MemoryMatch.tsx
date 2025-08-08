@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RotateCcw, Trophy, Eye, EyeOff } from 'lucide-react'
+import { RotateCcw, Trophy, Eye } from 'lucide-react'
 
 interface Card {
   id: number
