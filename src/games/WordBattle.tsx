@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { RotateCcw, Trophy, Puzzle, Clock } from 'lucide-react'
+import { validWords } from '../data/words'
 
 interface GameState {
   letters: string[]
@@ -30,34 +31,7 @@ const WordBattle: React.FC = () => {
     message: ''
   })
 
-  // Common English words for validation (simplified set)
-  const validWords = new Set([
-    'cat', 'dog', 'run', 'jump', 'play', 'game', 'word', 'time', 'good', 'best',
-    'love', 'life', 'work', 'home', 'help', 'make', 'take', 'come', 'give', 'find',
-    'hand', 'part', 'place', 'right', 'great', 'small', 'large', 'world', 'house',
-    'water', 'light', 'night', 'sound', 'white', 'black', 'green', 'blue', 'red',
-    'quick', 'brown', 'happy', 'angry', 'smart', 'funny', 'crazy', 'super', 'magic',
-    'power', 'money', 'paper', 'table', 'chair', 'phone', 'music', 'dance', 'sing',
-    'read', 'write', 'learn', 'teach', 'think', 'dream', 'sleep', 'wake', 'walk',
-    'talk', 'look', 'see', 'hear', 'feel', 'know', 'show', 'tell', 'ask', 'answer',
-    'open', 'close', 'start', 'stop', 'begin', 'end', 'first', 'last', 'next',
-    'back', 'front', 'side', 'top', 'down', 'left', 'turn', 'move', 'stay', 'go',
-    'book', 'page', 'line', 'word', 'letter', 'number', 'count', 'add', 'less',
-    'more', 'most', 'some', 'all', 'each', 'every', 'many', 'few', 'one', 'two',
-    'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'hundred',
-    'food', 'eat', 'drink', 'cook', 'meal', 'bread', 'meat', 'fish', 'milk',
-    'tree', 'leaf', 'flower', 'grass', 'bird', 'fish', 'animal', 'horse', 'cow',
-    'car', 'bus', 'train', 'plane', 'ship', 'road', 'street', 'city', 'town',
-    'school', 'class', 'student', 'teacher', 'lesson', 'test', 'grade', 'study',
-    'family', 'mother', 'father', 'child', 'baby', 'boy', 'girl', 'man', 'woman',
-    'friend', 'people', 'person', 'group', 'team', 'party', 'meet', 'visit',
-    'year', 'month', 'week', 'day', 'hour', 'minute', 'second', 'today', 'tomorrow',
-    'yesterday', 'morning', 'afternoon', 'evening', 'early', 'late', 'soon', 'now',
-    'hot', 'cold', 'warm', 'cool', 'dry', 'wet', 'clean', 'dirty', 'new', 'old',
-    'young', 'fast', 'slow', 'high', 'low', 'long', 'short', 'wide', 'narrow',
-    'strong', 'weak', 'hard', 'soft', 'heavy', 'light', 'full', 'empty', 'rich',
-    'poor', 'free', 'busy', 'easy', 'difficult', 'simple', 'complex', 'clear'
-  ])
+  // Using comprehensive word list from external file
 
   // Generate random letters
   const generateLetters = (): string[] => {
