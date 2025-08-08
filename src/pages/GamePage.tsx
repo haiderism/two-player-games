@@ -6,6 +6,7 @@ import TicTacToe from '../games/TicTacToe'
 import ConnectFour from '../games/ConnectFour'
 import RockPaperScissors from '../games/RockPaperScissors'
 import MemoryMatch from '../games/MemoryMatch'
+import Chess from '../games/Chess'
 
 const GamePage: React.FC = () => {
   const { gameId } = useParams<{ gameId: string }>()
@@ -43,6 +44,8 @@ const GamePage: React.FC = () => {
         return <RockPaperScissors key={gameKey} />
       case 'memory-match':
         return <MemoryMatch key={gameKey} />
+      case 'chess':
+        return <Chess key={gameKey} />
       default:
         return (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-soft p-8 text-center">
