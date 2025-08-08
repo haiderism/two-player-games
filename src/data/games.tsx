@@ -72,8 +72,8 @@ export const games: Game[] = [
       'Check and checkmate detection included',
     ],
     howToPlay: 'Click on a piece to select it and see possible moves highlighted in green. Click on a green square to move. Protect your king and capture the opponent\'s pieces!',
-   },
-   {
+  },
+  {
     id: 'rock-paper-scissors',
     title: 'Rock Paper Scissors',
     description: 'The timeless hand game. Best of 5 rounds wins!',

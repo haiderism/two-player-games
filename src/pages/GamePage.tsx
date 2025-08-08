@@ -7,6 +7,11 @@ import ConnectFour from '../games/ConnectFour'
 import RockPaperScissors from '../games/RockPaperScissors'
 import MemoryMatch from '../games/MemoryMatch'
 import Chess from '../games/Chess'
+import DotsAndBoxes from '../games/DotsAndBoxes'
+import LightningRounds from '../games/LightningRounds'
+import WordBattle from '../games/WordBattle'
+import NumberDuel from '../games/NumberDuel'
+import StrategyShowdown from '../games/StrategyShowdown'
 
 const GamePage: React.FC = () => {
   const { gameId } = useParams<{ gameId: string }>()
@@ -46,6 +51,16 @@ const GamePage: React.FC = () => {
         return <MemoryMatch key={gameKey} />
       case 'chess':
         return <Chess key={gameKey} />
+      case 'dots-and-boxes':
+        return <DotsAndBoxes key={gameKey} />
+      case 'lightning-rounds':
+        return <LightningRounds key={gameKey} />
+      case 'word-battle':
+        return <WordBattle key={gameKey} />
+      case 'number-duel':
+        return <NumberDuel key={gameKey} />
+      case 'strategy-showdown':
+        return <StrategyShowdown key={gameKey} />
       default:
         return (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-soft p-8 text-center">
